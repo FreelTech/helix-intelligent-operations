@@ -1,0 +1,111 @@
+name: PR checks
+
+# No path or branch filters. A filtered workflow leaves a required check
+# Pending forever, which blocks the pull request with no error. See A9.3.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard-secrets:
+    name: guard-secrets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan tracked files for credential-shaped strings
+        run: |
+          set -euo pipefail
+          PATTERN='password[[:space:]]*=|secret[[:space:]]*=|api[_-]?key[[:space:]]*=|bearer[[:space:]]+[A-Za-z0-9._-]{16,}|AccountKey=|-----BEGIN [A-Z ]*PRIVATE KEY-----'
+
+          # Build the list of files to scan: every tracked file whose path does not
+          # start with an entry in .ci/scanignore. No process substitution, so this
+          # behaves identically under bash, sh and zsh.
+          git ls-files > /tmp/tracked.txt
+          : > /tmp/toscan.txt
+          while IFS= read -r f; do
+            skip=0
+            while IFS= read -r raw; do
+              ignore="${raw%%#*}"
+              ignore="$(printf '%s' "$ignore" | xargs || true)"
+              [ -z "$ignore" ] && continue
+              case "$f" in "$ignore"*) skip=1; break ;; esac
+            done < .ci/scanignore
+            [ "$skip" -eq 0 ] && printf '%s\n' "$f" >> /tmp/toscan.txt
+          done < /tmp/tracked.txt
+
+          HITS="$(tr '\n' '\0' < /tmp/toscan.txt | xargs -0 -r grep -aInE "$PATTERN" || true)"
+          if [ -n "$HITS" ]; then
+            echo "::error::credential-shaped strings found in tracked files"
+            printf '%s\n' "$HITS" | head -20
+            echo "Remove the value, rotate it, and remember that deleting it in a"
+            echo "later commit does not remove it from history."
+            exit 1
+          fi
+          echo "Secret scan clean. Scanned $(wc -l < /tmp/toscan.txt) of $(wc -l < /tmp/tracked.txt) tracked files."
+
+  guard-artefacts:
+    name: guard-artefacts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assert no build output or solution archives are tracked
+        run: |
+          set -euo pipefail
+          OFFENDERS="$(git ls-files | grep -E '(^|/)(bin|obj|node_modules|dist|out)/|\.zip$' || true)"
+          if [ -n "$OFFENDERS" ]; then
+            echo "::error::Build output or archives are tracked in Git:"
+            echo "$OFFENDERS"
+            echo "Solution source is committed unpacked, never as archives (NFR-MNT-03)."
+            exit 1
+          fi
+          echo "No tracked build output."
+
+  guard-adr:
+    name: guard-adr
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assert ADR filenames and register are consistent
+        run: |
+          set -euo pipefail
+          INDEX=docs/logs/decision-index.md
+          FAILED=0
+          for f in docs/adr/ADR-*.md; do
+            [ -e "$f" ] || continue
+            base="$(basename "$f")"
+            if ! echo "$base" | grep -qE '^ADR-[0-9]{3}-[a-z0-9]+(-[a-z0-9]+)*\.md$'; then
+              echo "::error file=$f::filename must match ADR-NNN-kebab-title.md"
+              FAILED=1
+            fi
+            id="$(echo "$base" | cut -d- -f1,2)"
+            if [ -f "$INDEX" ] && ! grep -q "$id" "$INDEX"; then
+              echo "::error file=$f::$id is not listed in $INDEX"
+              FAILED=1
+            fi
+          done
+          [ "$FAILED" -eq 1 ] && exit 1
+          echo "ADR filenames and register consistent."
+
+  guard-pr-title:
+    name: guard-pr-title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assert the pull request title is a Conventional Commit
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TITLE:-}" ]; then
+            echo "No pull request title in context (manual run). Skipping."
+            exit 0
+          fi
+          if echo "$TITLE" | grep -qE '^(feat|fix|docs|chore|refactor|test|perf|build|ci)(\([a-z0-9-]+\))?!?: .{3,}'; then
+            echo "Title OK: $TITLE"
+          else
+            echo "::error::Title must be a Conventional Commit, e.g. 'docs: add ADR-002'"
+            echo "Received: $TITLE"
+            exit 1
+          fi
