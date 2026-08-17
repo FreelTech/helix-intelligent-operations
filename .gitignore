@@ -1,0 +1,56 @@
+cat > .gitignore <<'EOF'
+# ---- Secrets: never commit anything matching these ----
+*.env
+.env
+.env.*
+local.settings.json
+appsettings.Development.json
+appsettings.Local.json
+*.publishsettings
+*.pfx
+*.pem
+*.key
+secrets.json
+**/secrets/**
+
+# ---- .NET build output (plugins, Azure Functions) ----
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+project.lock.json
+artifacts/
+
+# ---- Node / PCF ----
+node_modules/
+out/
+dist/
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# ---- PAC CLI / solution tooling ----
+*.zip
+.pac/
+Entities/**/bin/
+PowerAppsTools_*/
+
+# ---- Azure Functions local ----
+local.settings.json
+.azure/
+.python_packages/
+
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ---- Editors ----
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.shared.json
+.idea/
+*.swp
+EOF
