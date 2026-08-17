@@ -1,0 +1,6 @@
+# Paths excluded from the CI secret scan.
+# Every line here is a hole in the scan. Justify each one, and review this file
+# whenever it grows — an allowlist nobody reads is how a real key gets through.
+.github/workflows/pr-checks.yml   # contains the detection patterns themselves
+.ci/scanignore                    # contains the word "key" in this comment
+docs/stages/                      # teaching material quotes deliberately fake keys
