@@ -78,3 +78,7 @@ local.settings.json
 
 # --- macOS ---
 .DS_Store
+
+# --- Solution export artefacts (added Stage 2, NFR-MNT-03) ---
+# Unpacked source is committed; the archive never is.
+*.zip
