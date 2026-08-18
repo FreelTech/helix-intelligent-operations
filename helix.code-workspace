@@ -1,0 +1,29 @@
+{
+  "folders": [
+    { "name": "repo",        "path": "." },
+    { "name": "plugins",     "path": "src/plugins" },
+    { "name": "pcf",         "path": "src/pcf" },
+    { "name": "functions",   "path": "src/functions" },
+    { "name": "scripts",     "path": "src/scripts" },
+    { "name": "solutions",   "path": "src/solutions" },
+    { "name": "docs",        "path": "docs" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/bin": true,
+      "**/obj": true,
+      "**/node_modules": true
+    },
+    "editor.formatOnSave": true,
+    "dotnet.defaultSolution": "disable"
+  },
+  "extensions": {
+    "recommendations": [
+      "microsoft-IsvExpTools.powerplatform-vscode",
+      "ms-dotnettools.csdevkit",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "redhat.vscode-yaml"
+    ]
+  }
+}

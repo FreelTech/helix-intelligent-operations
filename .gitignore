@@ -54,3 +54,27 @@ local.settings.json
 .idea/
 *.swp
 EOF
+
+# --- .NET (added Stage 1) ---
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+.vs/
+*.snk
+*.pfx
+*.nupkg
+outputPackages/
+
+# --- Node / PCF (added Stage 1) ---
+node_modules/
+dist/
+out/
+npm-debug.log*
+
+# --- Azure Functions local settings (added Stage 1, NFR-SEC-01) ---
+local.settings.json
+
+# --- macOS ---
+.DS_Store
