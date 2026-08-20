@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a655bfd7-a640-4552-86ac-1f3500c73729}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="hlx_actionname" select="1" icon="1" preview="1">
+        <row name="result" id="hlx_agentactionlogid">
+          <cell name="hlx_actionname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="hlx_agentactionlog">
+          <attribute name="hlx_agentactionlogid" />
+          <attribute name="hlx_actionname" />
+          <attribute name="createdon" />
+          <order attribute="hlx_actionname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Agent action logs" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

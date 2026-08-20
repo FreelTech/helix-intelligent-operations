@@ -79,7 +79,32 @@
         </Address>
       </Addresses>
     </Publisher>
-    <RootComponents />
-    <MissingDependencies />
+    <RootComponents>
+      <RootComponent type="1" schemaName="businessunit" behavior="1" />
+      <RootComponent type="1" schemaName="hlx_agentactionlog" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_case" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_casedocument" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_casenote" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_casetype" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_division" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_helixcontact" behavior="0" />
+      <RootComponent type="1" schemaName="hlx_slapolicy" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="9" schemaName="hlx_agentactiontype" behavior="0" />
+      <RootComponent type="9" schemaName="hlx_documenttype" behavior="0" />
+      <RootComponent type="9" schemaName="hlx_languagepreference" behavior="0" />
+      <RootComponent type="9" schemaName="hlx_priority" behavior="0" />
+      <RootComponent type="9" schemaName="hlx_sourcechannel" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="businessunit" displayName="BusinessUnit" parentSchemaName="" solution="System (5.0)" />
+        <Dependent type="1" schemaName="businessunit" displayName="BusinessUnit" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="systemuser" displayName="SystemUser" parentSchemaName="" solution="msdyn_PowerAdminSettingsEmail (2.2.3489.1)" />
+        <Dependent type="1" schemaName="systemuser" displayName="SystemUser" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

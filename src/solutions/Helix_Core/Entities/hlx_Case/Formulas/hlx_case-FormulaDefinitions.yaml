@@ -1,0 +1,8 @@
+hlx_ragstatus: |-
+    =If(
+        IsBlank(hlx_sladue), "Not set",
+        hlx_sladue < Now(), "Red",
+        DateDiff( Now(), hlx_sladue, TimeUnit.Hours ) <= 4, "Amber",
+        "Green"
+    )
+hlx_slabreached: =If( IsBlank(hlx_sladue), false, hlx_sladue < Now() )
