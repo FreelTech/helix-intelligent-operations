@@ -1,0 +1,22 @@
+{
+  "$comment": "Source of truth for Helix reference data. Rows are NOT solution components; pac data is Windows-only (file 02, ADR-003). Until the Stage 5 console app can import this, entry is by hand and this file is what is compared against.",
+  "generatedAtStage": 3,
+  "hlx_division": [
+    { "hlx_divisionname": "NexaFinance", "hlx_divisioncode": "FIN", "hlx_businessunit": "NexaFinance", "hlx_defaultslahours": 48 },
+    { "hlx_divisionname": "NexaServe",   "hlx_divisioncode": "SRV", "hlx_businessunit": "NexaServe",   "hlx_defaultslahours": 120 },
+    { "hlx_divisionname": "NexaWorks",   "hlx_divisioncode": "WRK", "hlx_businessunit": "NexaWorks",   "hlx_defaultslahours": 24 }
+  ],
+  "hlx_slapolicy": [
+    { "hlx_slapolicyname": "Standard",  "hlx_targethours": 120, "hlx_appliestopriority": "Normal",   "hlx_businesshoursonly": false },
+    { "hlx_slapolicyname": "Priority",  "hlx_targethours": 48,  "hlx_appliestopriority": "High",     "hlx_businesshoursonly": false },
+    { "hlx_slapolicyname": "Immediate", "hlx_targethours": 4,   "hlx_appliestopriority": "Critical", "hlx_businesshoursonly": false }
+  ],
+  "hlx_casetype": [
+    { "hlx_casetypename": "Complaint - service",   "hlx_division": "NexaFinance", "hlx_defaultslapolicy": "Standard",  "hlx_defaultpriority": "Normal" },
+    { "hlx_casetypename": "Complaint - vulnerable","hlx_division": "NexaFinance", "hlx_defaultslapolicy": "Priority",  "hlx_defaultpriority": "High" },
+    { "hlx_casetypename": "Service request",       "hlx_division": "NexaServe",   "hlx_defaultslapolicy": "Standard",  "hlx_defaultpriority": "Normal" },
+    { "hlx_casetypename": "Accessibility issue",   "hlx_division": "NexaServe",   "hlx_defaultslapolicy": "Priority",  "hlx_defaultpriority": "High" },
+    { "hlx_casetypename": "Site incident",         "hlx_division": "NexaWorks",   "hlx_defaultslapolicy": "Immediate", "hlx_defaultpriority": "Critical" },
+    { "hlx_casetypename": "Near miss",             "hlx_division": "NexaWorks",   "hlx_defaultslapolicy": "Standard",  "hlx_defaultpriority": "Normal" }
+  ]
+}

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5616dd8a-65c9-4fde-ba3c-18b21f3227b6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="hlx_fullname" select="1" icon="1" preview="1">
+        <row name="result" id="hlx_helixcontactid">
+          <cell name="hlx_fullname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="hlx_helixcontact">
+          <attribute name="hlx_helixcontactid" />
+          <attribute name="hlx_fullname" />
+          <attribute name="createdon" />
+          <order attribute="hlx_fullname" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Helix Contact Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
