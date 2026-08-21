@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{9d6143b3-349d-f111-b8de-002248db5401}" Name="Helix Case - Case reference is immutable once set" Description="Supports BR-01. Form affordance only. Lock is a model-driven-only action and is ignored server-side by design; the server-side owner of this column is the Stage 5 SetCaseReference plug-in (ADR-018)." xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/HelixCase-Casereferenceisimmutableonceset-9D6143B3-349D-F111-B8DE-002248DB5401.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <ModernFlowType>0</ModernFlowType>
+  <PrimaryEntity>hlx_Case</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Helix Case - Case reference is immutable once set" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Supports BR-01. Form affordance only. Lock is a model-driven-only action and is ignored server-side by design; the server-side owner of this column is the Stage 5 SetCaseReference plug-in (ADR-018)." />
+  </Descriptions>
+</Workflow>

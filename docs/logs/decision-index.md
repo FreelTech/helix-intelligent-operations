@@ -16,6 +16,8 @@ collision, and the numbers here win.
 | ADR-008 | *reserved* — connector-to-Function authentication | Planned | 8 |
 | ADR-009 | *reserved* — RAG banding derivation, formula column versus client logic | Planned | 6 |
 | ADR-010 | *reserved* — canvas field capture, Patch() over EditForm | Planned | 10 |
+| ADR-017 | *reserved* — canvas field capture, Patch() over EditForm | Planned | 10 |
+| ADR-018 | *reserved* — canvas field capture, Patch() over EditForm | Planned | 10 |
 
 > Numbering rule: allocate the next free number when the decision is *made*, not when
 > it is anticipated. Reserved rows above exist to prevent the collision that occurred
