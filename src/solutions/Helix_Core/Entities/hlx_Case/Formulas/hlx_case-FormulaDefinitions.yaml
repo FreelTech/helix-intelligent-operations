@@ -1,3 +1,9 @@
+hlx_hoursuntilsla: |-
+    =If(
+        IsBlank(hlx_sladue),
+        Blank(),
+        DateDiff(Now(), hlx_sladue, TimeUnit.Hours)
+    )
 hlx_ragstatus: |-
     =If(
         IsBlank(hlx_sladue), "Not set",

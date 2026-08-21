@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26081.137" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26081.137" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26081.00137">
+<ImportExportXml version="9.2.26081.137" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26081.137" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26082.00128">
   <SolutionManifest>
     <UniqueName>Helix_Core</UniqueName>
     <LocalizedNames>
@@ -90,6 +90,9 @@
       <RootComponent type="1" schemaName="hlx_helixcontact" behavior="0" />
       <RootComponent type="1" schemaName="hlx_slapolicy" behavior="0" />
       <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="29" id="{12dbdbdb-399d-f111-b8de-002248db5401}" behavior="0" />
+      <RootComponent type="29" id="{71bdf266-d59c-f111-b8de-002248db5401}" behavior="0" />
+      <RootComponent type="29" id="{9d6143b3-349d-f111-b8de-002248db5401}" behavior="0" />
       <RootComponent type="9" schemaName="hlx_agentactiontype" behavior="0" />
       <RootComponent type="9" schemaName="hlx_documenttype" behavior="0" />
       <RootComponent type="9" schemaName="hlx_languagepreference" behavior="0" />

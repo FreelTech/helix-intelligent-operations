@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{71bdf266-d59c-f111-b8de-002248db5401}" Name="Helix Case - Summary required on every path" Description="FR-CM-01. Entity scope so the rule holds for API, flow and import writes, not only forms. Show Error Message is one of the three actions that survive server-side execution (ADR-018)." xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/HelixCase-Summaryrequiredoneverypath-71BDF266-D59C-F111-B8DE-002248DB5401.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>2</ProcessTriggerScope>
+  <ModernFlowType>0</ModernFlowType>
+  <PrimaryEntity>hlx_Case</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Helix Case - Summary required on every path" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="FR-CM-01. Entity scope so the rule holds for API, flow and import writes, not only forms. Show Error Message is one of the three actions that survive server-side execution (ADR-018)." />
+  </Descriptions>
+  <labels>
+    <steplabels id="{6b725a64-7187-47db-b3f5-becb863c5c15}">
+      <label languagecode="1033" description="Enter a summary before saving. Every case must describe what happened." />
+    </steplabels>
+  </labels>
+</Workflow>
