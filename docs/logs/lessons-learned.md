@@ -12,3 +12,27 @@ not at the end.
 | 2026-08-17 | 0 | CI needs only a repository and something worth checking; CD needs environments and an identity. Conflating them is how automation gets postponed for three months. |
 | 2026-08-17 | 0 | Leaving any "initialise this repository" option ticked on GitHub creates a commit your local history lacks, and the first push is rejected as non-fast-forward. Force-pushing over a machine-generated placeholder is fine; the same command against a repo anyone has cloned destroys work. Use `--force-with-lease`, never `--force`. |
 | 2026-08-17 | 0 | Squash merge rewrites the change into a new commit, so `git branch -d` always refuses afterwards. `-D` is correct — but a safety that fires on every PR trains you to ignore it, so verify the content is on `main` before deleting, every time. |
+
+
+pac version is 2.5.1+gab954cf
+dotnet version is 10.0.301
+Microsoft.CrmSdk.CoreAssemblies = 9.0.2.*
+
+logical names for entities
+
+hlx_caseid
+hlx_casereference
+hlx_casetype
+hlx_division
+hlx_helixcontact - watch this one carefully.
+hlx_hoursuntilsla
+hlx_notecount
+hlx_pretriaged
+hlx_priority
+hlx_ragstatus
+hlx_resolutionsummary
+hlx_slabreached
+hlx_sladue
+hlx_sourcechannel
+hlx_summary
+hlx_totalaicost
