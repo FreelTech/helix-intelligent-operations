@@ -1,0 +1,66 @@
+{
+    "solutionUniqueName": "Helix_Core",
+    "packageUniqueName": "nexacorp_Helix.Plugins",
+    "packageVersion": "1.0.0",
+    "nupkg": "src/plugins/Helix.Plugins/bin/Release/nexacorp_Helix.Plugins.1.0.0.nupkg",
+    "steps": [
+        {
+            "name": "Helix: SetCaseReference on Create of hlx_case (PreOperation)",
+            "description": "FR-CM-02, FR-CM-03, BR-01. Stamps hlx_division from the case type and generates the division-prefixed case reference before commit.",
+            "typeName": "Helix.Plugins.SetCaseReference",
+            "message": "Create",
+            "primaryEntity": "hlx_case",
+            "stage": 20,
+            "mode": 0,
+            "rank": 10,
+            "filteringAttributes": null,
+            "images": []
+        },
+        {
+            "name": "Helix: SetVulnerablePriority on Create of hlx_case (PreOperation)",
+            "description": "NFR-CMP-01, BR-02, BR-04. Raises hlx_priority when the linked contact is flagged vulnerable. Rank 20 so it always runs after SetCaseReference.",
+            "typeName": "Helix.Plugins.SetVulnerablePriority",
+            "message": "Create",
+            "primaryEntity": "hlx_case",
+            "stage": 20,
+            "mode": 0,
+            "rank": 20,
+            "filteringAttributes": null,
+            "images": []
+        },
+        {
+            "name": "Helix: GuardCaseClose on Update of hlx_case (PreValidation)",
+            "description": "FR-CM-05, BR-03. Blocks a transition into Closed unless a resolution summary exists. PreValidation so the cancel happens before the transaction. No bypass, by design (ADR-025).",
+            "typeName": "Helix.Plugins.GuardCaseClose",
+            "message": "Update",
+            "primaryEntity": "hlx_case",
+            "stage": 10,
+            "mode": 0,
+            "rank": 10,
+            "filteringAttributes": "statecode,statuscode",
+            "images": [
+                {
+                    "name": "Helix: GuardCaseClose pre-image",
+                    "alias": "pre",
+                    "imageType": 0,
+                    "attributes": "statecode,statuscode,hlx_resolutionsummary"
+                }
+            ]
+        }
+    ],
+    "smoke": {
+        "caseTable": "hlx_case",
+        "summaryColumn": "hlx_summary",
+        "referenceColumn": "hlx_casereference",
+        "priorityColumn": "hlx_priority",
+        "caseTypeLookup": "hlx_casetype",
+        "contactLookup": "hlx_contact",
+        "divisionLookup": "hlx_division",
+        "caseTypeTable": "hlx_casetype",
+        "caseTypeNameColumn": "hlx_casetypename",
+        "caseTypeName": "Complaint - vulnerable",
+        "contactTable": "hlx_helixcontact",
+        "contactNameColumn": "hlx_fullname",
+        "contactName": "Bethan Price"
+    }
+}

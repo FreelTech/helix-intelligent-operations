@@ -10,8 +10,18 @@
     <layoutxml>
       <grid name="resultset" jump="hlx_casereference" select="1" icon="1" preview="1">
         <row name="result" id="hlx_caseid">
-          <cell name="hlx_casereference" width="300" />
+          <cell name="hlx_casereference" width="145" />
           <cell name="createdon" width="125" />
+          <cell name="hlx_casetype" width="149" />
+          <cell name="hlx_division" width="100" />
+          <cell name="hlx_ragstatus" width="106" />
+          <cell name="hlx_resolutionsummary" width="160" />
+          <cell name="hlx_priority" width="100" />
+          <cell name="statecode" width="100" />
+          <cell name="statuscode" width="125" />
+          <cell name="hlx_slabreached" width="123" />
+          <cell name="hlx_helixcontact" width="119" />
+          <cell name="hlx_pretriaged" width="107" />
         </row>
       </grid>
     </layoutxml>
@@ -26,6 +36,16 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="hlx_casetype" />
+          <attribute name="hlx_division" />
+          <attribute name="hlx_ragstatus" />
+          <attribute name="hlx_resolutionsummary" />
+          <attribute name="statecode" />
+          <attribute name="statuscode" />
+          <attribute name="hlx_slabreached" />
+          <attribute name="hlx_helixcontact" />
+          <attribute name="hlx_pretriaged" />
+          <attribute name="hlx_priority" />
         </entity>
       </fetch>
     </fetchxml>

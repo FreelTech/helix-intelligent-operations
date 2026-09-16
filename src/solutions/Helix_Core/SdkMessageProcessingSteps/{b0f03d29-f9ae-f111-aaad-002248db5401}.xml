@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Helix: GuardCaseClose on Update of hlx_case (PreValidation)" SdkMessageProcessingStepId="{b0f03d29-f9ae-f111-aaad-002248db5401}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeExportKey>B62AB5B2308204FAEB46DB50BB4C5FB4072AE816E8B64B3907B6DD1851EDBF1B</PluginTypeExportKey>
+  <PrimaryEntity>hlx_case</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>FR-CM-05, BR-03. Blocks a transition into Closed unless a resolution summary exists. PreValidation so the cancel happens before the transaction. No bypass, by design (ADR-025).</Description>
+  <FilteringAttributes>statecode,statuscode</FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>10</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>10</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages>
+    <SdkMessageProcessingStepImage Name="Helix: GuardCaseClose pre-image">
+      <SdkMessageProcessingStepImageId>{6c91db98-f9ae-f111-aaad-002248db5401}</SdkMessageProcessingStepImageId>
+      <Attributes>statecode,statuscode,hlx_resolutionsummary</Attributes>
+      <EntityAlias>pre</EntityAlias>
+      <ImageType>0</ImageType>
+      <MessagePropertyName>Target</MessagePropertyName>
+      <IsCustomizable>1</IsCustomizable>
+    </SdkMessageProcessingStepImage>
+  </SdkMessageProcessingStepImages>
+</SdkMessageProcessingStep>

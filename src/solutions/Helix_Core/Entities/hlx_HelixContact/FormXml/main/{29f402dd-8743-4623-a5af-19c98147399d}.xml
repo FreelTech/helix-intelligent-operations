@@ -43,6 +43,38 @@
                         <control id="hlx_opencasecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="hlx_opencasecount" disabled="false" />
                       </cell>
                     </row>
+                    <row>
+                      <cell id="{fb2975d1-7b2b-4ace-9958-65e2908e2d8a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Preferred channel" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_preferredchannel" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hlx_preferredchannel" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ac100b8e-167a-43ba-af62-36c07bd364c1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Is vulnerable" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_isvulnerable" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="hlx_isvulnerable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{10319689-b586-4028-b7ac-80c3db45f02b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="hlx_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d937dba3-4ef0-4e93-b19e-59f729a7b16f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Phone " languagecode="1033" />
+                        </labels>
+                        <control id="hlx_phone" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hlx_phone" disabled="false" />
+                      </cell>
+                    </row>
                   </rows>
                 </section>
               </sections>

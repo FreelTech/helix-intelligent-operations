@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26081.137" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26081.137" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26082.00128">
+<ImportExportXml version="9.2.26085.142" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26085.142" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26085.00142">
   <SolutionManifest>
     <UniqueName>Helix_Core</UniqueName>
     <LocalizedNames>
@@ -93,11 +93,17 @@
       <RootComponent type="29" id="{12dbdbdb-399d-f111-b8de-002248db5401}" behavior="0" />
       <RootComponent type="29" id="{71bdf266-d59c-f111-b8de-002248db5401}" behavior="0" />
       <RootComponent type="29" id="{9d6143b3-349d-f111-b8de-002248db5401}" behavior="0" />
+      <RootComponent type="62" schemaName="hlx_test" behavior="0" />
+      <RootComponent type="80" schemaName="hlx_test" behavior="0" />
       <RootComponent type="9" schemaName="hlx_agentactiontype" behavior="0" />
       <RootComponent type="9" schemaName="hlx_documenttype" behavior="0" />
       <RootComponent type="9" schemaName="hlx_languagepreference" behavior="0" />
       <RootComponent type="9" schemaName="hlx_priority" behavior="0" />
       <RootComponent type="9" schemaName="hlx_sourcechannel" behavior="0" />
+      <RootComponent type="91" id="{3c5c5486-46b1-f111-aaac-002248db5401}" schemaName="Helix.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" behavior="0" />
+      <RootComponent type="92" id="{52bd0b35-f8ae-f111-aaad-002248db5401}" behavior="0" />
+      <RootComponent type="92" id="{b0f03d29-f9ae-f111-aaad-002248db5401}" behavior="0" />
+      <RootComponent type="92" id="{d8eb1583-f8ae-f111-aaad-002248db5401}" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -105,8 +111,20 @@
         <Dependent type="1" schemaName="businessunit" displayName="BusinessUnit" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="1" schemaName="systemuser" displayName="SystemUser" parentSchemaName="" solution="msdyn_PowerAdminSettingsEmail (2.2.3489.1)" />
+        <Required type="1" schemaName="systemuser" displayName="SystemUser" parentSchemaName="" solution="msdyn_PowerAdminSettingsEmail (2.2.3517.1)" />
         <Dependent type="1" schemaName="systemuser" displayName="SystemUser" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)">
+          <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
+        </Required>
+        <Dependent type="80" schemaName="hlx_test" displayName="test" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.20)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
+        </Required>
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=hlx_test,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="hlx_test" id.settingdefinitionid.uniquename="AppChannel" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

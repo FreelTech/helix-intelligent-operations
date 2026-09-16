@@ -12,6 +12,14 @@
         <row name="result" id="hlx_helixcontactid">
           <cell name="hlx_fullname" width="300" />
           <cell name="createdon" width="125" />
+          <cell name="hlx_isvulnerable" width="114" />
+          <cell name="hlx_email" width="100" />
+          <cell name="hlx_opencasecount" width="140" />
+          <cell name="hlx_phone" width="100" />
+          <cell name="statecode" width="100" />
+          <cell name="statuscode" width="125" />
+          <cell name="hlx_languageperference" width="165" />
+          <cell name="hlx_preferredchannel" width="143" />
         </row>
       </grid>
     </layoutxml>
@@ -26,6 +34,14 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
+          <attribute name="hlx_isvulnerable" />
+          <attribute name="hlx_email" />
+          <attribute name="hlx_opencasecount" />
+          <attribute name="hlx_phone" />
+          <attribute name="statecode" />
+          <attribute name="statuscode" />
+          <attribute name="hlx_languageperference" />
+          <attribute name="hlx_preferredchannel" />
         </entity>
       </fetch>
     </fetchxml>
