@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{95bd86a2-e2a1-46e9-b829-837a3be8f3b2}" IsUserDefined="1">
           <labels>
@@ -35,6 +35,78 @@
                         <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
                       </cell>
                     </row>
+                    <row>
+                      <cell id="{9f7efa95-2eba-481e-8462-f0c2d3cfdd95}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Priority" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_priority" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="hlx_priority" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4c08483a-c2a6-45d2-b1e6-83d6eeccce1d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Summary" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_summary" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="hlx_summary" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cee93b60-be68-4d91-82aa-12d741ab8a95}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Resolution summary" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_resolutionsummary" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="hlx_resolutionsummary" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc3e6dea-6ea7-482d-bf41-50c83903afe2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Division" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_division" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hlx_division" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b2f09e50-e779-4399-9953-dc56e79c7333}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Case type" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_casetype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hlx_casetype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3b4d2c0f-1576-4f3a-bcae-ea4e4c44dce9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="RAG status" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_ragstatus" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hlx_ragstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f5253719-a725-4ef4-a794-bfe60a3f97ef}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5195495e-85e9-41b2-8cce-aba50de3d141}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7f1b0cc-4ff0-4217-b5c3-98acd67fd71d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Helix Contact" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_helixcontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hlx_helixcontact" disabled="false" />
+                      </cell>
+                    </row>
                   </rows>
                 </section>
               </sections>
@@ -42,6 +114,51 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{c56c79c5-8ad8-4fff-9291-19bdf9ac96c8}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{4c779f76-cd00-4ece-8800-12ba57be3f13}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0cdc61fd-a701-4570-ad20-ef19a928cdb9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e978374b-e5a7-41ef-84fd-47a91b3c6f43}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{10087575-fa54-4002-ac09-60fb973e9b12}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f6264119-c566-482b-a688-d59aa66c7c0e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{af2955b4-1206-40ca-bdea-639e474e0583}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b6a75807-0c75-41a5-adca-e6d367009303}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

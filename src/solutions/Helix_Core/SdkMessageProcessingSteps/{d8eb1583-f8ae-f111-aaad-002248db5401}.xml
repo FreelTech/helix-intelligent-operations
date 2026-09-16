@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="Helix: SetVulnerablePriority on Create of hlx_case (PreOperation)" SdkMessageProcessingStepId="{d8eb1583-f8ae-f111-aaad-002248db5401}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  <PluginTypeExportKey>378E352FBF949079B3BCEC6DA7DEDC84AC710F5F87DDFBD4170977B606FD750C</PluginTypeExportKey>
+  <PrimaryEntity>hlx_case</PrimaryEntity>
+  <AsyncAutoDelete>0</AsyncAutoDelete>
+  <Description>NFR-CMP-01, BR-02, BR-04. Raises hlx_priority when the linked contact is flagged vulnerable. Rank 20 so it always runs after SetCaseReference.</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>1</InvocationSource>
+  <Mode>0</Mode>
+  <Rank>20</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>20</Stage>
+  <IsCustomizable>1</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>

@@ -1,0 +1,9 @@
+<pluginpackage uniquename="nexacorp_Helix.Plugins">
+  <exportkeyversion>1</exportkeyversion>
+  <iscustomizable>1</iscustomizable>
+  <name>nexacorp_Helix.Plugins</name>
+  <package mimetype="application/octet-stream">nexacorp_Helix.Plugins.nupkg</package>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <version>1.0.0</version>
+</pluginpackage>
