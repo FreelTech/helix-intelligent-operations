@@ -4,6 +4,7 @@ name: PR checks
 # Pending forever, which blocks the pull request with no error. See A9.3.
 on:
   pull_request:
+    types: [opened, synchronize, reopened, edited]
   workflow_dispatch:
 
 permissions:
