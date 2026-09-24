@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{08ffcdbd-13b8-f111-aaae-002248db5401}</WebResourceId>
+  <Name>hlx_caseWelsh</Name>
+  <DisplayName>caseWelsh</DisplayName>
+  <Description>Reveals the Welsh service section when the case's contact prefers Welsh. Registered on the Case main form OnLoad only - see ADR-030 and DEBT-10. Requirement FR-LOC-02, use case UC-07.</Description>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/hlx_caseWelsh08FFCDBD-13B8-F111-AAAE-002248DB5401</FileName>
+</WebResource>

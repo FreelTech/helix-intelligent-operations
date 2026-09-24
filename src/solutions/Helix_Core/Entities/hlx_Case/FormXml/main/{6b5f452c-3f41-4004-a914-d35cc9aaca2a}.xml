@@ -7,7 +7,7 @@
     <FormActivationState>1</FormActivationState>
     <form headerdensity="HighWithControls">
       <tabs>
-        <tab verticallayout="true" id="{95bd86a2-e2a1-46e9-b829-837a3be8f3b2}" IsUserDefined="1">
+        <tab verticallayout="true" id="{95bd86a2-e2a1-46e9-b829-837a3be8f3b2}" IsUserDefined="1" name="general_tab">
           <labels>
             <label description="General" languagecode="1033" />
           </labels>
@@ -20,7 +20,7 @@
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{7b616504-3a34-44a2-bdc0-f054cf2dc3bd}">
+                      <cell id="{7b616504-3a34-44a2-bdc0-f054cf2dc3bd}" visible="false">
                         <labels>
                           <label description="Case reference" languagecode="1033" />
                         </labels>
@@ -80,11 +80,11 @@
                         <labels>
                           <label description="RAG status" languagecode="1033" />
                         </labels>
-                        <control id="hlx_ragstatus" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="hlx_ragstatus" disabled="false" />
+                        <control id="hlx_ragstatus" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="hlx_ragstatus" disabled="false" uniqueid="{4634c561-f392-490d-93aa-b4ea0be1c029}" />
                       </cell>
                     </row>
                     <row>
-                      <cell id="{f5253719-a725-4ef4-a794-bfe60a3f97ef}" locklevel="0" colspan="1" rowspan="1">
+                      <cell id="{f5253719-a725-4ef4-a794-bfe60a3f97ef}" locklevel="0" colspan="1" rowspan="1" visible="false">
                         <labels>
                           <label description="Status" languagecode="1033" />
                         </labels>
@@ -105,6 +105,30 @@
                           <label description="Helix Contact" languagecode="1033" />
                         </labels>
                         <control id="hlx_helixcontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="hlx_helixcontact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{59bd554e-cc7f-453e-8dd4-e20e61aa9b86}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="SLA due" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_sladue" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="hlx_sladue" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="sec_welsh" id="5b49b9dc-690f-421c-8e28-ba88967596d6" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="Gwasanaeth Cymraeg / Welsh service" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{3d1ab425-4981-4f35-a452-b7df2c08e5d1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Summary (Welsh)" languagecode="1033" />
+                        </labels>
+                        <control id="hlx_summarycy" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="hlx_summarycy" disabled="false" />
                       </cell>
                     </row>
                   </rows>
@@ -159,6 +183,43 @@
       <DisplayConditions Order="0" FallbackForm="true">
         <Everyone />
       </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{4634c561-f392-490d-93aa-b4ea0be1c029}">
+          <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>hlx_ragstatus</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="hlx_Helix.CaseSlaDial">
+            <parameters>
+              <ragStatus type="SingleLine.Text">hlx_ragstatus</ragStatus>
+              <horizonHours type="Whole.None" static="true">72</horizonHours>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="hlx_Helix.CaseSlaDial">
+            <parameters>
+              <ragStatus type="SingleLine.Text">hlx_ragstatus</ragStatus>
+              <horizonHours type="Whole.None" static="true">72</horizonHours>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="hlx_Helix.CaseSlaDial">
+            <parameters>
+              <ragStatus type="SingleLine.Text">hlx_ragstatus</ragStatus>
+              <horizonHours type="Whole.None" static="true">72</horizonHours>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="hlx_caseWelsh" libraryUniqueId="{b8135da6-8f1e-4ded-a50a-b7d1aa409f9a}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="Helix.Case.onLoad" libraryName="hlx_caseWelsh" handlerUniqueId="{ff11ea3f-3a5b-4ce0-b32f-ddc0044567ff}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

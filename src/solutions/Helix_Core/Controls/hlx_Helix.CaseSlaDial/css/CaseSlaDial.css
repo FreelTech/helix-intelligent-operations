@@ -1,0 +1,23 @@
+.helix-dial {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.helix-dial svg { flex: 0 0 auto; }
+
+.helix-dial-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.helix-dial-band   { font-weight: 600; font-size: 14px; }
+.helix-dial-detail { font-size: 12px; opacity: 0.75; }
+
+.helix-track       { stroke: #d6d6d6; }
+.helix-arc-green   { stroke: #107c10; }
+.helix-arc-amber   { stroke: #9a6700; }
+.helix-arc-red     { stroke: #a4262c; }
+.helix-arc-notset  { stroke: #8a8886; }
