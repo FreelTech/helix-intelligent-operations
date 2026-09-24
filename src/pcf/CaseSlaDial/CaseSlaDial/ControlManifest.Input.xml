@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="Helix" constructor="CaseSlaDial" version="1.0.0" display-name-key="CaseSlaDial" description-key="Draws the server-computed RAG status as an accessible dial. Contains no banding logic." control-type="standard">
+
+    <type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Decimal</type>
+      <type>FP</type>
+    </type-group>
+
+    <property name="ragStatus" display-name-key="RAG status" description-key="The server-computed band. Bind this to the RAG status column." of-type="SingleLine.Text" usage="bound" required="true" />
+
+    <property name="hoursRemaining" display-name-key="Hours until SLA" description-key="Signed hours remaining, computed on the server. Bind this to the Hours until SLA column." of-type-group="numbers" usage="input" required="false" />
+
+    <property name="horizonHours" display-name-key="Arc horizon (hours)" description-key="How many hours remaining count as a full arc. Presentation only - changes nothing about the band." of-type="Whole.None" usage="input" required="false" default-value="72" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="css/CaseSlaDial.css" order="1" />
+    </resources>
+
+  </control>
+</manifest>
