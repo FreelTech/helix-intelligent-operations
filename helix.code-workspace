@@ -15,7 +15,8 @@
       "**/node_modules": true
     },
     "editor.formatOnSave": true,
-    "dotnet.defaultSolution": "disable"
+    "dotnet.defaultSolution": "disable",
+    "codeQL.githubDatabase.download": "never"
   },
   "extensions": {
     "recommendations": [
